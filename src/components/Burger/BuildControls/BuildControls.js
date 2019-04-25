@@ -24,7 +24,8 @@ const BuildControls = props => {
       }
       <span>
         <button className={classes.StartOver} onClick={props.startOver}>Start Over</button>
-        Total Price: <strong>${props.total.toFixed(2)}</strong>
+        <button className={classes.Order}>Order</button>
+        Total: <strong>${props.total.toFixed(2)}</strong>
       </span>
     </div>
   );
