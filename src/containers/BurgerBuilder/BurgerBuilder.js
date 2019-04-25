@@ -9,14 +9,15 @@ const INGREDIENT_PRICES = {
   meat: 1.3,
   bacon: 0.7
 };
+const INITIAL_STATE = {
+  ingredients: {
+
+  },
+  totalPrice: 4
+};
 class BurgerBuilder extends React.Component {
 
-    state = {
-      ingredients: {
-
-      },
-      totalPrice: 4
-    };
+    state = INITIAL_STATE;
 
     addIngredientHandler = (type) => {
       const oldCount = this.state.ingredients[type] || 0;
@@ -43,6 +44,10 @@ class BurgerBuilder extends React.Component {
       this.setState({totalPrice: newPrice, ingredients: updatedIngredients});
     };
 
+    startOver = () => {
+      this.setState(INITIAL_STATE);
+    };
+
     render() {
       const disabledInfo = {...this.state.ingredients};
       for (let key in INGREDIENT_PRICES) {
@@ -55,7 +60,8 @@ class BurgerBuilder extends React.Component {
             add={this.addIngredientHandler}
             remove={this.removeIngredientHandler}
             disabled={disabledInfo}
-            total={this.state.totalPrice}/>
+            total={this.state.totalPrice}
+            startOver={this.startOver}/>
         </Aux>
       );
     }

@@ -10,3 +10,17 @@
   position: fixed;
   bottom: 0;
 }
+
+.StartOver {
+  margin-right:20px;
+  border: 1px solid red;
+  background-color: #c18545;
+  color: #18181d;
+  cursor: pointer;
+  width: 80px;
+  height:25px;
+  outline: none;
+}
+.StartOver:hover {
+  background-color: #f0a752;
+}

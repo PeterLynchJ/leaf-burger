@@ -22,7 +22,10 @@ const BuildControls = props => {
             disabled={props.disabled[ctrl.type]}/>
         ))
       }
-      <span>Total Price: <strong>${props.total.toFixed(2)}</strong></span>
+      <span>
+        <button className={classes.StartOver} onClick={props.startOver}>Start Over</button>
+        Total Price: <strong>${props.total.toFixed(2)}</strong>
+      </span>
     </div>
   );
 };
