@@ -18,9 +18,11 @@ const BuildControls = props => {
             key={ctrl.label}
             label={ctrl.label}
             add={props.add.bind(null, ctrl.type)}
-            remove={props.remove.bind(null, ctrl.type)}/>
+            remove={props.remove.bind(null, ctrl.type)}
+            disabled={props.disabled[ctrl.type]}/>
         ))
       }
+      <span>Total Price: <strong>${props.total.toFixed(2)}</strong></span>
     </div>
   );
 };

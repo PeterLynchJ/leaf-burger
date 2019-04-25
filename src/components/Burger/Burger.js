@@ -20,6 +20,7 @@ const burger = props => {
       <BurgerIngredient type="bread-top"/>
       {transformedIngredients.length === 0 ? 'Please add ingredients' : transformedIngredients}
       <BurgerIngredient type="bread-bottom"/>
+      <div className={classes.Placeholder}></div>
     </div>
   );
 };

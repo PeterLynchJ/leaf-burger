@@ -35,3 +35,14 @@
   background-color: #65e231;
   color: white;
 }
+
+.BuildControl .Less:disabled, .BuildControl .More:disabled {
+  background-color: #002e08;
+  color: white;
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.BuildControl div:first-child{
+  width: 60px;
+}
